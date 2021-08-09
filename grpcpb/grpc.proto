@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package gRPC;
+option go_package = "/grpcpb";
+
+message request {
+    string name = 1;
+}
+
+message response {
+    string salutaion = 1;
+}
+
+service satuationGreet {
+    rpc greetSal(request) returns (response) {}
+}
